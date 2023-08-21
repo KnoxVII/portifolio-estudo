@@ -13,6 +13,7 @@ body {
   animation: inicializar .7s forwards;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #000;
 }
 
 /* HEADER  */
@@ -25,7 +26,7 @@ header {
 }
 
 header h1 {
-  color: #dc3545;
+  color: #ff5d56;
   font-size: 2.5rem;
 }
 
@@ -110,6 +111,146 @@ header .navegacao-primaria li a {
   }
   to {
     opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* SEÇÃO PRINCIPAL SOBRE MIM */
+main {
+  background-color: #111;
+  color: #f7f7f7;
+}
+
+main .sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  justify-content: center;
+  padding: 40px;
+  margin-top: 60px;
+}
+
+.sobre_titulo {
+  margin: 30px 0;
+  grid-column: 1/-1;
+  text-align: center;
+  color: #fff;
+}
+
+.sobre_titulo h1 {
+  font-size: 2.5rem;
+  color: #ff5d56;
+  margin-bottom: 15px;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.sobre_titulo p {
+  color: #707070;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.sobre_titulo div {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.sobre_titulo span {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #ff5d56;
+}
+
+.sobre img {
+  animation: ladoSecao .6s ease-in-out forwards;
+  cursor: pointer;
+  grid-row: 2;
+  max-width: 100%;
+  border-radius: 4px;
+  filter: blur(0);
+  transition: .5s ;
+}
+
+.sobre img:hover {
+  filter: blur(2px);
+}
+
+.sobre_conteudo {
+  animation: sobeSecao .6s ease-in-out forwards;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 2/-1;
+  color: #707070;
+}
+
+.sobre_texto {
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sobre_texto h1 {
+  font-size: 2.3rem;
+  color: #fff;
+  grid-column: 1/-1;
+}
+
+.sobre_texto h1::after {
+  background-color: #ff5d56;
+  height: 6px;
+  width: 60px;
+  margin: 20px 0;
+  content: '';
+  display: block;
+  border-radius: 5px;
+}
+
+.sobre_texto p {
+  font-size: 1.3rem;
+  grid-row: 2;
+  grid-column: 1/-1;
+}
+
+.sobre_info {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1/-1;
+  gap: 15px;
+  align-items: center;
+}
+
+.sobre_info i {
+  color: #ff5d56;
+  display: inline-block;
+  padding-right: 15px;
+  font-size: 1.5rem;
+}
+
+.sobre_info p {
+  font-size: .9rem;
+}
+
+@keyframes sobeSecao {
+  from {
+    transition: .5s;
+    transform: translate3d(240px, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes ladoSecao {
+  from {
+    transition: .5s;
+    transform: translate3d(-240px, 0, 0);
+  }
+  to {
     transform: translate3d(0, 0, 0);
   }
 }

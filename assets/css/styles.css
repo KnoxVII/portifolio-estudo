@@ -271,6 +271,8 @@ main .sobre {
   }
 
   .section-div {
-    background-image: url();
+    background-image: url(../img/photo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

@@ -31,20 +31,35 @@ header h1 {
 }
 
 header span {
-  color: #fff;
+  color: #f7f7f7;
 }
 
 header .navegacao-primaria {
   display: flex;
-  gap: 10px;
+  gap: 30px;
   align-items: center;
 }
 
 header .navegacao-primaria li a {
-  padding: 10px;
-  color: #fff;
+  color: #f7f7f7;
+  width: 0px;
+  height: 0px;
   font-size: 1.3rem;
 }
+
+header .navegacao-primaria li a::after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  display: block;
+  border-bottom: 4px solid #ff5d56;
+  transition: 1s;
+}
+
+header .navegacao-primaria li a:hover::after {
+  width: 100%;
+}
+
 
 /* DOWNLOAD CV  */
 .section-div {
@@ -78,7 +93,7 @@ header .navegacao-primaria li a {
 
 .section-div div a {
   justify-self: start;
-  color: #fff;
+  color: #f7f7f7;
   padding: 15px 40px;
   border-radius: 5px;
   border: 2px solid #f7f7f7;
@@ -134,7 +149,7 @@ main .sobre {
   margin: 30px 0;
   grid-column: 1/-1;
   text-align: center;
-  color: #fff;
+  color: #f7f7f7;
 }
 
 .sobre_titulo h1 {
@@ -195,7 +210,7 @@ main .sobre {
 
 .sobre_texto h1 {
   font-size: 2.3rem;
-  color: #fff;
+  color: #f7f7f7;
   grid-column: 1/-1;
 }
 
@@ -276,6 +291,11 @@ main .sobre {
     background-size: cover;
   }
 
+  header {
+    justify-content: space-between;
+    padding: 30px 70px;
+  }
+
   header .navegacao-primaria {
     display: none;
   }
@@ -283,6 +303,20 @@ main .sobre {
   header i {
     color: #f7f7f7;
     font-size: 3rem;
+  }
+
+  header .navegacao-primaria.ativado {
+    background: linear-gradient(#000, #111);
+    position: absolute;
+    display: grid;
+    top: 80px;
+    color: #f7f7f7;
+    z-index: 1;
+    padding: 30px;
+    font-weight: bold;
+    border-radius: 0 0 4px 4px;
+    right: 20px;
+    animation: sobeSecao .8s ease-in-out forwards;
   }
 }
 

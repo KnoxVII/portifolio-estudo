@@ -76,4 +76,71 @@ function sobreMim(){
 
 sobreMim();
 
+const listaAll = document.querySelectorAll('.projects_armazenamento ul li');
+const buttomGeral = document.querySelectorAll('.projects_models ul li');
+const buttomAll = document.querySelectorAll('.projects_models .all');
+
+function removeClick(index) {
+  buttomGeral.forEach((item)=>{
+    item.classList.remove('ativo');
+  })
+  buttomGeral[index].classList.add('ativo');
+}
+
+buttomGeral.forEach((item, index)=>{
+  item.addEventListener('click', ()=>{
+    removeClick(index);
+  })
+})
+
+function showList(lista, buttom = 'all') {
+  lista.forEach((item)=>{
+    item.classList.remove('ativo')
+  })
+  if (buttom == "design") {
+    lista[0].classList.add('ativo');
+    lista[1].classList.add('ativo');
+  }
+  if (buttom == "graphic") {
+    lista[2].classList.add('ativo');
+    lista[3].classList.add('ativo');
+  }
+  if (buttom == "website") {
+    lista[4].classList.add('ativo');
+    lista[5].classList.add('ativo');
+    lista[6].classList.add('ativo');
+    lista[7].classList.add('ativo');
+  }
+  if (buttom == "all") {
+    lista[0].classList.add('ativo');
+    lista[1].classList.add('ativo');
+    lista[2].classList.add('ativo');
+    lista[3].classList.add('ativo');
+    lista[4].classList.add('ativo');
+    lista[5].classList.add('ativo');
+    lista[6].classList.add('ativo');
+    lista[7].classList.add('ativo');
+  } 
+}
+
+buttomGeral.forEach((item)=>{
+  item.addEventListener('click', (e)=>{
+    let currentButtom = e.target;
+    if (currentButtom.classList.contains('all')){
+      showList(listaAll);
+    }
+    if (currentButtom.classList.contains('design')){
+      showList(listaAll, 'design');
+    }
+    if (currentButtom.classList.contains('graphic')){
+      showList(listaAll, 'graphic');
+    }
+    if (currentButtom.classList.contains('website')){
+      showList(listaAll, 'website');
+    }
+    if (currentButtom.classList.contains('all')){
+      showList(listaAll, 'all');
+    }
+  })
+})
 

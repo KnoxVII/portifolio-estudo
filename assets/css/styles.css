@@ -44,7 +44,9 @@ header .navegacao-primaria li a {
   color: #f7f7f7;
   width: 0px;
   height: 0px;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  font-family: 'poppins';
+
 }
 
 header .navegacao-primaria li a::after {
@@ -97,6 +99,14 @@ header .navegacao-primaria li a:hover::after {
   padding: 15px 40px;
   border-radius: 5px;
   border: 2px solid #f7f7f7;
+  transition: .5s;
+  font-family: 'poppins';
+  font-weight: bold;
+}
+
+.section-div div a:hover {
+  background-color: #f7f7f7;
+  color: #222;
 }
 
 .section-div img {
@@ -789,7 +799,7 @@ main {
 }
 
 .projects a {
-  background-color: rgba(34, 34, 34, 0.63);
+  background-color: #222222a1;
   border-radius: 4px;
   text-decoration: none;
   justify-self: center;
@@ -806,4 +816,54 @@ main {
   100% {
     opacity: 1;
   }
+}
+
+/* FOOTER */
+footer {
+  background-color: #000;
+  padding: 30px;
+}
+
+.footer_sociais {
+  display: flex;
+  color: #f7f7f7;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+
+.footer_sociais li {
+  background-color: #222;
+  border-radius: 50%;
+  border: 2px solid #2e2e2e;
+  cursor: pointer;
+}
+
+.footer_sociais li i {
+  padding: 30px;
+  font-size: 1.5rem;
+}
+
+.footer_sociais li:hover {
+  transition: .3s ease-in-out;
+  background-color: #2e2e2e;
+}
+
+.footer_sociais::before {
+  content:'';
+  height: 5px;
+  width: 200px;
+  position: absolute;
+  bottom: -30px;
+  background-color: #222;
+}
+
+footer .footer_comercial {
+  text-align: center;
+  color: #f7f7f7;
+  margin: 90px auto;
+  font-size: 1rem;
+  font-family: 'poppins';
 }
